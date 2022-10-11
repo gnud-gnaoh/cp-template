@@ -1,0 +1,2 @@
+- Make sure your code has same format with the current code(don't pull request to change code format)
+- Use space instead of tab char
