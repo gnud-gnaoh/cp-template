@@ -17,6 +17,7 @@ void FileIO() {
         freopen(TASK".inp", "r", stdin);
         freopen(TASK".out", "w", stdout);
     }
+    #undef TASK
 }
 
 int main() {
