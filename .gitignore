@@ -1,0 +1,7 @@
+# ignore all files
+*
+# whitelist directories
+!*/
+# except for code files
+!.gitignore
+!*.cpp
