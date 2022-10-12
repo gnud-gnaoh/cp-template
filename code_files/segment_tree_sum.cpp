@@ -17,28 +17,28 @@ int Get(int l, int r) {
     return Get(l, r, 1, 1, n);
 }
 
-void Set(int pos, int v, int x, int l, int r) {
-    if (l == r) {
+void Set(int pos, int v, int x, int lx, int rx) {
+    if (lx == rx) {
         tree[x] = v;
         return;
     }
-    int m = (l + r) / 2;
+    int m = (lx + rx) / 2;
     if (pos <= m) {
-        Set(pos, v, 2 * x, l, m);
+        Set(pos, v, 2 * x, lx, m);
     } else {
-        Set(pos, v, 2 * x + 1, m + 1, r);
+        Set(pos, v, 2 * x + 1, m + 1, rx);
     }
     tree[x] = tree[2 * x] + tree[2 * x + 1];
 }
 
-void Build(int x, int l, int r) {
-    if (l == r) {
-        tree[x] = a[l];
+void Build(int x, int lx, int rx) {
+    if (lx == rx) {
+        tree[x] = a[lx];
         return;
     }
-    int m = (l + r) / 2;
-    Build(2 * x, l, m);
-    Build(2 * x + 1, m + 1, r);
+    int m = (lx + rx) / 2;
+    Build(2 * x, lx, m);
+    Build(2 * x + 1, m + 1, rx);
     tree[x] = tree[2 * x] + tree[2 * x + 1];
 }
 
