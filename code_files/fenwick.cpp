@@ -1,7 +1,7 @@
 int bit[N];
 
 void Update(int u, int v) {
-    for (int i = 1; i <= n; i += i & -i) {
+    for (int i = u; i <= n; i += i & -i) {
         bit[i] += v;
     }
 }
