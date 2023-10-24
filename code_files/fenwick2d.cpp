@@ -6,8 +6,7 @@ q <= 1e5
 - {1, i, j, v} (1 <= i <= m, 1 <= j <= n, |v| <= 1e9): add v to square (i, j)
 - {2, x1, y1, x2, y2}: find the sum of squares inside rectangle with the corresponding 4 corners
 */
-#include <bits/stdc++.h>
-using namespace std;
+#include "general.cpp"
 
 const int Q = 1e5;
 const int INF = 2e9;
