@@ -7,3 +7,5 @@
 !*.cpp
 !.gitattributes
 !*.md
+# vs config files
+.vscode
