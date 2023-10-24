@@ -7,6 +7,7 @@ struct Mint {
     explicit operator int() { return v; }
     Mint() { v = 0; }
     Mint(long long _v) { v = _v % MOD; v += (v < 0) * MOD; }
+    bool operator == (const Mint& oth) const { return v == oth.v; }
 };
 Mint& operator += (Mint& a, const Mint& b) {
     if ((a.v += b.v) >= MOD) a.v -= MOD;
