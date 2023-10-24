@@ -20,7 +20,7 @@ Mint& operator -= (Mint& a, const Mint& b) {
 Mint operator + (Mint a, Mint b) { return a += b; }
 Mint operator - (Mint a, Mint b) { return a -= b; }
 Mint operator * (const Mint& a, const Mint& b) { return Mint(1LL * a.v * b.v); }
-Mint& operator *= (Mint& a, Mint b) { a = a * b; }
+Mint& operator *= (Mint& a, Mint b) { return a = a * b; }
 Mint pow(Mint a, long long p) {
     Mint res = 1;
     while (p) {
