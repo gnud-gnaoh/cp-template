@@ -39,8 +39,8 @@ struct Hash {
 };
 
 pair<int, Mint> get_single_hash(const string& a) {
-    int oh;
-    Mint mh;
+    int oh = 0;
+    Mint mh = 0;
     for (int i = 0; i < sz(a); i++) {
         oh = oh * P + a[i];
         mh = mh * P + a[i];
