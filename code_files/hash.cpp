@@ -25,6 +25,8 @@ struct Hash {
     Hash() = default;
     Hash(const string& a) {
         n = sz(a); // a is 0-indexed
+        oh.resize(n + 1);
+        mh.resize(n + 1);
         for (int i = 1; i <= n; i++) {
             oh[i] = oh[i - 1] * P + a[i - 1];
             mh[i] = mh[i - 1] * P + a[i - 1];
